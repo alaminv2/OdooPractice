@@ -21,6 +21,12 @@
         <field name="arch" type="xml">
             <form string="Patient form">
                 <sheet>
+                    <!--                    Buttons-->
+                    <div class="oe_button_box">
+                        <button class="oe_stat_button" string="Appointments" name="patients_appointments" type="object"
+                                icon="fa-edit"/>
+                    </div>
+                    <!--                    Form Fields-->
                     <group>
                         <group>
                             <field name="name"/>
@@ -34,4 +40,19 @@
             </form>
         </field>
     </record>
+
+    <!--    Patient Search View-->
+    <record id="patient_search_view" model="ir.ui.view">
+        <field name="name">patient Search View</field>
+        <field name="model">patient.patient</field>
+        <field name="arch" type="xml">
+            <search string="">
+                <field name="name"/>
+                <field name="patient_name"/>
+                <filter string="Male" name="Male" domain="[('patient_gender', '=', 'male')]"/>
+                <filter string="Female" name="Female" domain="[('patient_gender', '=', 'female')]"/>
+            </search>
+        </field>
+    </record>
+
 </odoo>

@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'sale'],
 
     # always loaded
     'data': [
@@ -30,8 +30,9 @@
         'views/templates.xml',
         'views/patient.xml',
         'views/doctor.xml',
-        'views/menuitems.xml'       ,
-        'views/appointment.xml'       ,
+        'views/menuitems.xml',
+        'views/appointment.xml',
+        'views/inherited_views.xml',
 
         'data/sequence.xml',
     ],
