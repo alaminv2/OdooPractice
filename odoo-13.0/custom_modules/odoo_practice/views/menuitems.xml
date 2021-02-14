@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<!--    patient create actions-->
+    <record id="cliniq_root_1_action" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">patient.patient</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create New Patients.......!!!
+          </p>
+        </field>
+    </record>
+
+    <!--    doctors create actions-->
+    <record id="cliniq_root_2_action" model="ir.actions.act_window">
+        <field name="name">Doctors</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">doctor.doctor</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create New Doctors.......!!!
+          </p>
+        </field>
+    </record>
+
+    <!--    Appointment create actions-->
+    <record id="cliniq_root_3_action" model="ir.actions.act_window">
+        <field name="name">Appointments</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">appointment.appointment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create New Appointment.......!!!
+          </p>
+        </field>
+    </record>
+
+
+    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+    <menuitem id="cliniq_root" name="Cliniq" sequence="-1"/>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="cliniq_child_1" name="Patients" parent="cliniq_root" action="cliniq_root_1_action" sequence="1"/>
+    <menuitem id="cliniq_child_2" name="Doctors" parent="cliniq_root" action="cliniq_root_2_action" sequence="2"/>
+    <menuitem id="cliniq_child_3" name="Appointments" parent="cliniq_root" action="cliniq_root_3_action" sequence="3"/>
+</odoo>
